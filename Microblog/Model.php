@@ -21,7 +21,7 @@ abstract class Model
      * @param array $row
      * @return $this
      */
-    abstract public function populate($row);
+    abstract public function populate(array $row);
 
     /**
      * Converts the model to an array

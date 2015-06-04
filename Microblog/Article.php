@@ -71,16 +71,16 @@ class Article extends Model
      * 
      * @param array $row
      */
-    public function populate($row) {
+    public function populate(array $row) {
         $this->setArticleId($row['articleId']);
         $this->setTitle($row['title']);
         $this->setContent($row['content']);
     }
 
     /**
-     * Return article as an array
+     * Return article data as an array
      * 
-     * @return array
+     * @return array The article data
      */
     public function toArray() {
         return [
