@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} - {{ appName }}</title>
+    {% include 'backend/login/partials/bootstrap/head/common-style.html' %}
+    {% include 'backend/login/partials/bootstrap/head/login-style.html' %}
+  </head>
+  <body>
+      <div class="container">
+          <form class="form-signin" action="" method="post">
+              <h2 class="form-signin-heading text-center">Login</h2>
+              {% if alertMessage %}
+                  {% include 'backend/login/partials/bootstrap/body/alerts/danger.html' %}
+              {% endif %}
+              <label for="email" class="sr-only">Email address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+              <label for="password" class="sr-only">Password</label>
+              <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+              <div class="checkbox">
+                  <label for="remember">
+                      <input type="checkbox" name="remember" id="remember"> Remember me
+                  </label>
+              </div>
+              <input type="hidden" name="token" value="{{ token }}" />
+              <input class="btn btn-lg btn-primary btn-block" type="submit" value="Log in" />
+          </form>
+      </div>
+  </body>
+</html>
+

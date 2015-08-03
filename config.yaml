@@ -1,0 +1,15 @@
+# App
+appName: 'Microblog'
+appUrl: 'http://127.0.0.1:3333'
+environment: 'development'
+mysql:
+  host: '127.0.0.1'
+  dbname: 'mycroblog'
+  username: 'root'
+  password: 'qsdfqsdf'
+remember:
+  cookieName: 'microblogRemember'
+  cookieExpiry: 604800  # A month in seconds
+session:
+  sessionName: 'user'
+  tokenName: 'token'
